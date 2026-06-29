@@ -48,19 +48,20 @@ Dev-Diaries/
 
 2. **Set Environment Variables**
 
-   - `api/.env`
-     ```
-     MONGO_URI=your_mongodb_uri
-     JWT_SECRET=your_secret
-     GOOGLE_CLIENT_ID=your_client_id
-     GOOGLE_CLIENT_SECRET=your_secret
-     ```
+   Create a single `.env` file in the project root (see `.env.example`):
+   ```
+   # Backend
+   MONGO=your_mongodb_uri
+   JWT_SECRET=your_secret
 
-   - `client/.env`
-     ```
-     VITE_BACKEND_URL=http://localhost:5000/api
-     VITE_GOOGLE_CLIENT_ID=your_client_id
-     ```
+   # Frontend (Firebase Web config, build-time)
+   VITE_FIREBASE_API_KEY=your_firebase_api_key
+   VITE_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
+   VITE_FIREBASE_PROJECT_ID=your-project-id
+   VITE_FIREBASE_STORAGE_BUCKET=your-project.appspot.com
+   VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+   VITE_FIREBASE_APP_ID=your_app_id
+   ```
 
 3. **Install Dependencies**
    ```bash
@@ -80,7 +81,7 @@ Dev-Diaries/
    ```
 
 Frontend runs on: `http://localhost:5173`  
-Backend runs on: `http://localhost:5000`
+Backend runs on: `http://localhost:3000`
 
 ---
 
